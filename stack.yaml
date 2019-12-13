@@ -1,0 +1,9 @@
+resolver: nightly-2018-06-01
+
+packages:
+- .
+extra-deps:
+  - git: https://github.com/fizruk/telegram-bot-simple.git
+    commit: v0.2
+  - git: https://github.com/bitemyapp/esqueleto.git
+    commit: v2.6.1
