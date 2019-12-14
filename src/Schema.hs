@@ -9,7 +9,6 @@
 module Schema where
 
 import           Control.Monad.IO.Class
-import           Control.Monad.Logger
 import           Data.Text
 import           Data.Time
 import           Database.Persist.Postgresql
@@ -33,10 +32,8 @@ share
         sent UTCTime default=now()
 
         UniqueMsgUser messageId userId
-        Primary messageId
 
     |]
-
 
 doMigration :: MonadIO m => SqlPersistT m ()
 doMigration = runMigration migrateAll
