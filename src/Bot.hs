@@ -21,7 +21,6 @@ import           Telegram.Bot.Simple.UpdateParser
 
 data ChatState
   = InitSate
-  | RecordingMsg Text
   deriving (Show, Eq)
 
 newtype ChatModel =
